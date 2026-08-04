@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slackwater-forge"
+version = "0.1.0"
+description = "Overnight Forge — treat a local GPU as a production line that produces a morning briefing"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Casey DiGennaro", email = "casey@digennaro.dev"}]
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+    "httpx>=0.24",
+    "jinja2>=3.1",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+forge = "slackwater_forge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["slackwater_forge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

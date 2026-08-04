@@ -1,0 +1,58 @@
+{
+  "name": "overnight",
+  "description": "Example overnight session — code audit + creative + research",
+  "models": ["granite3.1-dense:2b"],
+  "start_time": "",
+  "end_time": "",
+  "jobs": [
+    {
+      "id": "lua_audit",
+      "name": "Lua Code Audit",
+      "type": "code_review",
+      "prompt": "Review this Roblox Lua code for bugs, performance issues, and best practices. Focus on: null safety, table manipulation, RemoteEvent security, and memory leaks.\n\nProvide specific, actionable feedback with line references.",
+      "system_prompt": "You are an expert Roblox Luau code reviewer. Be thorough but concise.",
+      "model": "granite3.1-dense:2b",
+      "priority": "high",
+      "token_budget": 50000,
+      "max_iterations": 5,
+      "output_format": "markdown",
+      "tags": ["roblox", "lua", "audit"],
+      "enabled": true,
+      "created_at": "2026-08-04T12:00:00",
+      "options": {"temperature": 0.3}
+    },
+    {
+      "id": "harbor_lore",
+      "name": "Harbor Vignettes",
+      "type": "creative_writing",
+      "prompt": "Write a 500-word vignette about life in a fishing village called Slackwater. Focus on sensory details: salt, rope, lantern light, the sound of hulls creaking. Include at least one memorable character.",
+      "system_prompt": "You are a skilled creative writer with a gift for maritime atmosphere and human detail.",
+      "model": "granite3.1-dense:2b",
+      "priority": "medium",
+      "token_budget": 20000,
+      "max_iterations": 3,
+      "output_format": "markdown",
+      "tags": ["creative", "worldbuilding"],
+      "enabled": true,
+      "created_at": "2026-08-04T12:00:00",
+      "options": {"temperature": 0.8}
+    },
+    {
+      "id": "luau_research",
+      "name": "Luau Performance Research",
+      "type": "research",
+      "prompt": "Research Roblox Luau performance optimization patterns. Cover: table.create vs literal tables, spatial queries, Instance:FindFirstChild alternatives, garbage collection tuning, and actor model parallelism.",
+      "system_prompt": "You are a research analyst specializing in game engine performance. Be objective and cite specifics.",
+      "model": "granite3.1-dense:2b",
+      "priority": "low",
+      "token_budget": 15000,
+      "max_iterations": 2,
+      "output_format": "markdown",
+      "tags": ["research", "performance"],
+      "enabled": true,
+      "created_at": "2026-08-04T12:00:00",
+      "options": {"temperature": 0.5}
+    }
+  ],
+  "global_options": {}
+}

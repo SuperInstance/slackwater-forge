@@ -1,0 +1,11 @@
+# ignore these
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+forge-output/
+jobs/
+.env
+*.log
