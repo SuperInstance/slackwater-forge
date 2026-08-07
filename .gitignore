@@ -9,3 +9,5 @@ forge-output/
 jobs/
 .env
 *.log
+.coverage
+.wrangler/
